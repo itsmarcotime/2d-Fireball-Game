@@ -1,4 +1,4 @@
-import { Sitting, Running, Jumping, Falling, Rolling } from './playerStates.js'
+import { Sitting, Running, Jumping, Falling, Rolling, Diving } from './playerStates.js'
 
 export class Player {
     constructor(game) {
@@ -19,7 +19,7 @@ export class Player {
         this.speed = 0;
         this.maxSpeed = 10;
         this.states = [new Sitting(this.game), new Running(this.game), new Jumping(this.game), new Falling(this.game), 
-            new Rolling(this.game)];
+            new Rolling(this.game), new Diving(this.game)];
     }
     update(input, deltaTime) {
         this.checkCollision();
@@ -34,7 +34,7 @@ export class Player {
         } else {
             this.speed = 0;
         }
-
+        // horizontal boundarious
         if (this.x < 0) {
             this.x = 0;
         } else if (this.x > this.game.width - this.width) {
@@ -47,6 +47,10 @@ export class Player {
             this.vy += this.weight;
         } else {
             this.vy = 0;
+        }
+        // vertical boundaries
+        if (this.y > this.game.height - this.height - this.game.groundMargin) {
+            this.y = this.game.height -this.height - this.game.groundMargin;
         }
 
         // sprite animation
