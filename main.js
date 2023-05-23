@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
         constructor(width, height) {
             this.width = width;
             this.height = height;
-            this.groundMargin = 80;
+            this.groundMargin = 40;
             this.speed = 0;
             this.maxSpeed = 4;
             this.background = new Background(this);
@@ -24,6 +24,7 @@ window.addEventListener('load', function() {
             this.enemies = [];
             this.particles = [];
             this.collisions = [];
+            this.floatingMessages = [];
             this.maxParticles = 50;
             this.enemyTimer = 0;
             this.enemyInterval = 1000;
@@ -33,6 +34,7 @@ window.addEventListener('load', function() {
             this.time = 0;
             this.maxTime = 10000;
             this.gameOver = false;
+            this.lives = 5;
             this.player.currentState = this.player.states[0];
             this.player.currentState.enter();
         }
@@ -57,6 +59,10 @@ window.addEventListener('load', function() {
                     //splice method takes 2 arguments index of element you want to remove, and how many elements to remove.
                     this.enemies.splice(this.enemies.indexOf(enemy), 1);
                 }
+            });
+            // handle messages 
+            this.floatingMessages.forEach(message => {
+                message.update();
             });
 
             // handle particles
@@ -90,6 +96,9 @@ window.addEventListener('load', function() {
             });
             this.collisions.forEach(collision => {
                 collision.draw(context);
+            });
+            this.floatingMessages.forEach(message => {
+                message.draw(context);
             });
             this.UI.draw(context);
         }
