@@ -16,21 +16,21 @@ Welcome to my first fully functional game, Shadow Perro! The goal for this game 
 timer hits 30 seconds. Becareful, you only have 3 lives! If you get hit you will be deducted 5 points and for every
 enemy you destroy you will recieve 1 point. 
 
-Enemies: 
--Flying enemies that wave in the skys waiting to attack the player!
--Spider enemies that pop in and out of view to capture the player!
--Evil Plants lurk the ground areas waiting for the player to stroll by..
+Controls:<br>
+Up arrow: jump<br>
+Down arrow: sit<br>
+Left arrow: movement left<br>
+Right arrow: movement right<br>
 
-Controls:
-Up arrow: jump
-Down arrow: sit 
-Left arrow: movement left
-Right arrow: movement right
+Enter + any arrow key: FireBall Attack<br>
+Up arrow + down arrow: Dive Attack<br>
 
-Enter + any arrow key: FireBall Attack
-Up arrow + down arrow: Dive Attack
+D key: editor mode.d<br>
 
-D key: editor mode.d
+Enemies:<br>
+-Flying enemies that wave in the skys waiting to attack the player!<br>
+-Spider enemies that pop in and out of view to capture the player!<br>
+-Evil Plants lurk the ground areas waiting for the player to stroll by..<br>
 
 ## Built-with
 This version of the application was built using HTML, CSS, JavaScript!
@@ -39,7 +39,7 @@ This version of the application was built using HTML, CSS, JavaScript!
 Contact me if you would like to contribute!
 
 ## Usage
-Live website: 
+Live website: https://itsmarcotime.github.io/JavaScript-Shadow-Perro/
 
 ## Questions
 Questions? <br /> 
