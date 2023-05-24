@@ -16,7 +16,7 @@ Welcome to my first fully functional game, Shadow Perro! The goal for this game 
 timer hits 30 seconds. Becareful, you only have 3 lives! If you get hit you will be deducted 5 points and for every
 enemy you destroy you will recieve 1 point. 
 
-Controls:<br>
+#### Controls:<br>
 Up arrow: jump<br>
 Down arrow: sit<br>
 Left arrow: movement left<br>
@@ -27,7 +27,7 @@ Up arrow + down arrow: Dive Attack<br>
 
 D key: editor mode.d<br>
 
-Enemies:<br>
+#### Enemies:<br>
 -Flying enemies that wave in the skys waiting to attack the player!<br>
 -Spider enemies that pop in and out of view to capture the player!<br>
 -Evil Plants lurk the ground areas waiting for the player to stroll by..<br>
